@@ -1,0 +1,160 @@
+/* Body tagen er uten for alle andre greier, siden den endres på størst */
+body {
+    margin: 0px;
+    font-family:Arial, Helvetica, sans-serif;
+
+    /* Denne fjernes senere: */
+    height: 10000px;
+    background-color: #484A47;
+}
+
+/* Alt under her er header, altså det første du ser når du kommer på siden. */
+/* forste-syn er hele div-en som fyller hele skjermen når du går inn på siden! */
+#forste-syn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    z-index: 101;
+}
+
+/* Bilde som fyller skjermen når du går inn på siden. */
+.header-bilde {
+    size: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 30;
+}
+
+/* Den hvite baren med overskrift og meny på */
+.hvite-baren {
+    background-color: #5C6D70;
+    z-index: 102;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    bottom: -0.000001px;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+/* Selve meny div-en */
+.meny {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+/* classen til alle linkene i meny-en */
+.meny-link {
+    margin: 10px;
+    font-size: 15px;
+    padding: 20px 25px;
+    color: black;
+    text-decoration: none;
+    background-color: #A37774;
+    border-radius: 16px;
+}
+
+/* Gjør bare at den bytter farge når du holder over den. */
+.meny-link:hover {
+    background-color: #E88873;
+}
+
+/* Alt under dette tilhører notchen, altså nav baren */
+
+/* Gjør bare at notchen alltid er sentrert */
+.sentrer-notch {
+    display: flex;
+    justify-content: center;
+}
+/* Selve notchen */
+.notch {
+    position: fixed;
+    background-color: #A37774;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+/* Linkene som er på notchen :) */
+.notch-link {
+    text-decoration: none;
+    color:black;
+    padding: 20px;
+}
+/* Samme som over, gjør at den bytter farge hvis du holder over den */
+.notch-link:hover {
+    background-color: #E88873;
+}
+
+/* Alt under dette tilhører info div-en */
+
+/* Selve div-en */
+.info-div {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: ". karbov karbov karbov karboh karboh karboh ."
+                        ". fettv fettv fettv fetth fetth fetth . ";
+    top: 100%;
+    width: 100%;
+    position: absolute;
+    margin-top: 20px;
+    z-index: 20;
+}
+
+/* Venstre siden av karbohydrat intro teksten */
+#karbo-v {
+    grid-area: karbov;
+    color: white;
+    background-color: #5C6D70;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+/* Høyre side av karbohydrat intro teksten, bare knappen altså */
+#karbo-h {
+    grid-area: karboh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Selve karbo-knappen */
+.knapp {
+    text-decoration: none;
+    background-color: #A37774;
+    color: black;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+/* Endrer fargen på knappen på hover */
+.knapp:hover {
+    background-color: #E88873;
+}
+
+#fett-v {
+    grid-area: fettv;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#fett-h {
+    grid-area: fetth;
+    color: white;
+    background-color: #5C6D70;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: end;
+}
