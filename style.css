@@ -4,7 +4,7 @@ body {
     font-family:Arial, Helvetica, sans-serif;
 
     /* Denne fjernes senere: */
-    height: 10000px;
+    /* height: 10000px; */
     background-color: #484A47;
 }
 
@@ -81,6 +81,9 @@ body {
     display: flex;
     justify-content: space-between;
     z-index: 100;
+    top: -15px;
+    border-radius: 16px;
+    padding-top: 15px;
 }
 
 /* Linkene som er på notchen :) */
@@ -88,6 +91,7 @@ body {
     text-decoration: none;
     color:black;
     padding: 20px;
+    border-radius: 16px;
 }
 /* Samme som over, gjør at den bytter farge hvis du holder over den */
 .notch-link:hover {
@@ -102,12 +106,36 @@ body {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: ". karbov karbov karbov karboh karboh karboh ."
-                        ". fettv fettv fettv fetth fetth fetth . ";
+                        ". fettv fettv fettv fetth fetth fetth ."
+                        ". proteinv proteinv proteinv proteinh proteinh proteinh . ";
     top: 100%;
     width: 100%;
     position: absolute;
     margin-top: 20px;
     z-index: 20;
+}
+
+/* Alle knappene */
+.knapp {
+    text-decoration: none;
+    background-color: #A37774;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    border-radius: 16px;
+}
+
+/* Endrer fargen på knappen på hover */
+.knapp:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E88873;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /* Venstre siden av karbohydrat intro teksten */
@@ -127,22 +155,7 @@ body {
     align-items: center;
 }
 
-/* Selve karbo-knappen */
-.knapp {
-    text-decoration: none;
-    background-color: #A37774;
-    color: black;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    border-radius: 16px;
-}
-
-/* Endrer fargen på knappen på hover */
-.knapp:hover {
-    background-color: #E88873;
-}
-
+/* Div-en med knappen for fett */
 #fett-v {
     grid-area: fettv;
     display: flex;
@@ -150,6 +163,7 @@ body {
     align-items: center;
 }
 
+/* Div-en med teksten om fett */
 #fett-h {
     grid-area: fetth;
     color: white;
@@ -157,4 +171,26 @@ body {
     padding: 20px;
     border-radius: 16px;
     text-align: end;
+}
+
+/* div-en med knappen om protein */
+#protein-h {
+    grid-area: proteinh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* div-en med info on protein */
+#protein-v {
+    grid-area: proteinv;
+    color: white;
+    background-color: #5C6D70;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+/* Alt under her er for footeren :) */
+.footer {
+    height: 10000px;
 }

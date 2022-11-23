@@ -1,0 +1,74 @@
+/* Body tagen er uten for alle andre greier, siden den endres på størst */
+body {
+    margin: 0px;
+    font-family:Arial, Helvetica, sans-serif;
+
+    /* Denne fjernes senere: */
+    /* height: 10000px; */
+    background-color: #484A47;
+}
+
+/* Alt under dette tilhører notchen, altså nav baren */
+
+/* Gjør bare at notchen alltid er sentrert */
+.sentrer-notch {
+    display: flex;
+    justify-content: center;
+}
+/* Selve notchen */
+.notch {
+    position: fixed;
+    background-color: #A37774;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    top: -15px;
+    border-radius: 16px;
+    padding-top: 15px;
+}
+
+/* Linkene som er på notchen :) */
+.notch-link {
+    text-decoration: none;
+    color:black;
+    padding: 20px;
+    border-radius: 16px;
+}
+/* Samme som over, gjør at den bytter farge hvis du holder over den */
+.notch-link:hover {
+    background-color: #E88873;
+}
+
+/* Alt under dette blir det første man ser på siden. */
+.forste-syn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.fyller-bilde {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 99;
+}
+
+.sirkel-tekst {
+    position:relative;
+    background-color: red;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 1000px;
+    bottom: 500px;
+    left: -500px;
+    z-index: 99;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.karbohydrater {
+    position: absolute;
+    bottom: 500px;
+}

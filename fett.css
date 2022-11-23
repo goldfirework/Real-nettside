@@ -1,0 +1,40 @@
+/* Body tagen er uten for alle andre greier, siden den endres på størst */
+body {
+    margin: 0px;
+    font-family:Arial, Helvetica, sans-serif;
+
+    /* Denne fjernes senere: */
+    /* height: 10000px; */
+    background-color: #484A47;
+}
+
+/* Alt under dette tilhører notchen, altså nav baren */
+
+/* Gjør bare at notchen alltid er sentrert */
+.sentrer-notch {
+    display: flex;
+    justify-content: center;
+}
+/* Selve notchen */
+.notch {
+    position: fixed;
+    background-color: #A37774;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    top: -15px;
+    border-radius: 16px;
+    padding-top: 15px;
+}
+
+/* Linkene som er på notchen :) */
+.notch-link {
+    text-decoration: none;
+    color:black;
+    padding: 20px;
+    border-radius: 16px;
+}
+/* Samme som over, gjør at den bytter farge hvis du holder over den */
+.notch-link:hover {
+    background-color: #E88873;
+}
