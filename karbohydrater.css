@@ -78,11 +78,93 @@ body {
 .info-div {
     background-color: #484A47;
     width: 100%;
-    height: 1000px;
     z-index: 105;
     top: 100%;
+    padding-top: 60px;
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: ". kb kb kb l l l ."
+                         ". k k k b b b ."
+                         "m m m m m m m m";
+}
+
+.karbo-kortinfo-h {
+    grid-area: l;
+    background-color: #A37774;
+    height: fit-content;
+    padding: 20px;
+    text-align: end;
+    border-radius: 16px;
+    margin-top: 50px;
+    max-height: 250px;
+}
+
+.karbo-kortinfo-v {
+    grid-area: kb;
+    display: flex;
+    max-height: 250px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.kortbilde {
+    border-radius: 16px;
+    height: 300px;
+}
+
+.karbo-info-venstre {
+    grid-area: k;
+}
+
+.karbo-tekst-overskrift {
+    background-color: #A37774;
+    width: max-content;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.karbo-tekst-info {
+    top: 99px;
+    background-color: #A37774;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.karbo-info-høyre {
+    grid-area: b;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 50px;
+}
+
+.karbo-bilde1 {
+    border-radius: 16px;
+    background-color: white;
+    height: 75%;
+}
+
+.matvarer-overskrift {
+    grid-area: t;
+}
+
+.matvarer-tabell {
+    grid-area: m;
+    background-color: #A37774;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabellen, .tabell-item {
+    border: 1px solid black;
+    background-color: #A37774;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    border-radius: 6px;
 }

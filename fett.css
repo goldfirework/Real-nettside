@@ -21,7 +21,7 @@ body {
     background-color: #A37774;
     display: flex;
     justify-content: space-between;
-    z-index: 100;
+    z-index: 1000;
     top: -15px;
     border-radius: 16px;
     padding-top: 15px;
@@ -37,4 +37,133 @@ body {
 /* Samme som over, gjør at den bytter farge hvis du holder over den */
 .notch-link:hover {
     background-color: #E88873;
+}
+
+/* Alt under dette blir det første man ser på siden. */
+.forste-syn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.fyller-bilde {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 99;
+}
+
+.sirkel-tekst {
+    position:relative;
+    background-color: #5C6D70;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 1000px;
+    bottom: 500px;
+    left: -500px;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.overskrift {
+    position: absolute;
+    right: 30%;
+    bottom: 65%;
+}
+
+.info-div {
+    background-color: #484A47;
+    width: 100%;
+    z-index: 105;
+    top: 100%;
+    padding-top: 60px;
+    position: absolute;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: ". kb kb kb l l l ."
+                         ". k k k b b b ."
+                         "m m m m m m m m";
+}
+
+.karbo-kortinfo-h {
+    grid-area: l;
+    background-color: #A37774;
+    height: fit-content;
+    padding: 20px;
+    text-align: end;
+    border-radius: 16px;
+    margin-top: 50px;
+    max-height: 250px;
+}
+
+.karbo-kortinfo-v {
+    grid-area: kb;
+    display: flex;
+    max-height: 250px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.kortbilde {
+    border-radius: 16px;
+    height: 300px;
+}
+
+.karbo-info-venstre {
+    grid-area: k;
+}
+
+.karbo-tekst-overskrift {
+    background-color: #A37774;
+    width: max-content;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.karbo-tekst-info {
+    top: 99px;
+    background-color: #A37774;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+.karbo-info-høyre {
+    grid-area: b;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.karbo-bilde1 {
+    border-radius: 16px;
+    background-color: white;
+    width: 100%;
+}
+
+.matvarer-overskrift {
+    grid-area: t;
+}
+
+.matvarer-tabell {
+    grid-area: m;
+    background-color: #A37774;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabellen, .tabell-item {
+    border: 1px solid black;
+    background-color: #A37774;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    border-radius: 6px;
 }
